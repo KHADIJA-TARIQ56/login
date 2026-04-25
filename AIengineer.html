@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Navigation Bar</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 50px;
+            background-color: #ffffff;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .logo {
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-links li {
+            display: inline;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #333;
+            font-size: 16px;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #2563eb;
+        }
+
+        .btn {
+            background-color: #2563eb;
+            color: white;
+            padding: 8px 18px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .btn:hover {
+            background-color: #1d4ed8;
+        }
+        /* footer */
+       .footer {
+    background: linear-gradient(135deg, #1e293b, #0f172a);
+    color: #fff;
+    padding: 60px 20px 30px;
+    text-align: center;
+}
+
+.footer h2 {
+    font-size: 26px;
+    margin-bottom: 10px;
+}
+
+.footer p {
+    color: #cbd5e1;
+    max-width: 500px;
+    margin: 0 auto 30px auto;
+}
+
+/* Footer Links */
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+}
+
+.footer-links div h3 {
+    margin-bottom: 15px;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links ul li {
+    margin-bottom: 8px;
+}
+
+.footer-links ul li a {
+    text-decoration: none;
+    color: #cbd5e1;
+    transition: 0.3s;
+}
+
+.footer-links ul li a:hover {
+    color: #3b82f6;
+}
+
+/* Social Icons */
+.social-icons {
+    margin-bottom: 30px;
+}
+
+.social-icons a {
+    margin: 0 15px;
+    font-size: 22px;
+    color: #ffffff;
+    transition: 0.3s;
+}
+
+.social-icons a:hover {
+    color: #3b82f6;
+    transform: scale(1.2);
+}
+
+/* Bottom Line */
+.footer-bottom {
+    border-top: 1px solid #334155;
+    padding-top: 15px;
+    font-size: 14px;
+    color: #94a3b8;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .footer-links {
+        gap: 40px;
+    }
+}
+/* explanation about careers */
+
+ /* explanation about careers */
+
+.summary-container {
+  position: relative;
+    background-image: url("https://www.shutterstock.com/image-vector/ai-machine-learning-concept-featuring-260nw-2710936601.jpg");
+    background-size: 55%;
+    background-position: center;
+    padding: 80px 40px;
+    margin: 60px auto;
+    width: 90%;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    
+}
+/* Dark overlay for better readability */
+.summary-container::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.65);
+}
+
+/* Content wrapper */
+.summary-content {
+    position: relative;
+    max-width: 750px;
+    z-index: 2;
+}
+
+.summary-heading {
+    font-size: 38px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+
+.summary-subheading {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: #3b82f6;
+    font-weight: 500;
+}
+
+.summary-text {
+    font-size: 17px;
+    line-height: 1.7;
+    color: #e2e8f0;
+    margin-bottom: 25px;
+}
+
+.summary-btn {
+    display: inline-block;
+    padding: 10px 22px;
+    background: #2563eb;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.summary-btn:hover {
+    background: #1d4ed8;
+    transform: translateY(-2px);
+}
+/* youtube videos */
+/* AI Section Full Width */
+.ai-section {
+     width: 90%;          /* Same as your other container */
+    margin: 60px auto;   /* Center it */
+    padding: 60px 50px;
+    background: linear-gradient(135deg, #0f172a, #1e293b);
+    color: white;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+
+/* Flex Layout */
+.ai-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+    flex-wrap: wrap;
+}
+
+/* Left Text */
+.ai-text {
+    flex: 1;
+    min-width: 300px;
+}
+
+.ai-text h2 {
+    font-size: 38px;
+    margin-bottom: 20px;
+}
+
+.ai-description {
+    font-size: 18px;
+    line-height: 1.7;
+    color: #cbd5e1;
+    margin-bottom: 20px;
+}
+
+.ai-points {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 30px;
+}
+
+.ai-points li {
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: #e2e8f0;
+}
+
+/* Video */
+.ai-video {
+    flex: 1;
+    min-width: 320px;
+}
+
+.ai-video iframe {
+    width: 100%;
+    height: 350px;
+    border-radius: 14px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+    border: none;
+}
+
+
+.summary-btn:hover {
+    background: #1d4ed8;
+    transform: translateY(-3px);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .ai-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .ai-video iframe {
+        height: 250px;
+    }
+}
+/* quiz question */
+/* Main Wrapper */
+.ai-assessment-wrapper{
+    font-family: Arial, sans-serif;
+    background: #ffffff;
+    min-height: 100vh;
+    padding-top: 80px;   /* space from top */
+    padding-bottom: 60px;
+}
+
+/* Center Container */
+.ai-quiz-container{
+    width: 800px;
+    margin: 0 auto;   /* center horizontally */
+    background: #f8fafc;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+}
+
+/* Title */
+.ai-title{
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 28px;
+    color: #0f172a;
+}
+
+/* Section Title */
+.ai-section-title{
+    font-size: 18px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    color: #1e293b;
+}
+
+/* Question Box */
+.ai-question-box{
+    background: linear-gradient(135deg, #1e293b, #0f172a);
+    padding: 25px;
+    border-radius: 12px;
+    border: 1px solid #e2e8f0;
+}
+
+/* Question */
+.ai-question-header{
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: white;
+}
+
+/* Options */
+.ai-options label{
+    display: block;
+    background: #f1f5f9;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.ai-options label:hover{
+    background: #e2e8f0;
+}
+
+.ai-options input{
+    margin-right: 8px;
+}
+
+/* Buttons */
+.ai-buttons{
+    margin-top: 25px;
+    text-align: center;
+}
+
+.ai-buttons button{
+    padding: 10px 25px;
+    margin: 0 10px;
+    background: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.ai-buttons button:hover{
+    background: #1d4ed8;
+}
+
+/* Result */
+.ai-result{
+    margin-top: 30px;
+    padding: 15px;
+    background: #f1f5f9;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 18px;
+    color: #0f172a;
+}
+.summary-container {
+  height: 380px; /* increase as needed */
+}
+.ai-section{
+   height: 380px; 
+}
+.ai-assessment-wrapper{
+   height: 350px;  
+}
+/* Buttons */
+.buttons{
+    margin-top:40px;
+}
+
+.btn-primary{
+    background:#2f5de0;
+    color:white;
+    padding:14px 28px;
+    border:none;
+    border-radius:8px;
+    font-size:16px;
+    cursor:pointer;
+    margin-right:15px;
+}
+
+.btn-secondary{
+    background:white;
+    color:#2f5de0;
+    padding:14px 28px;
+    border:2px solid #2f5de0;
+    border-radius:8px;
+    font-size:16px;
+    cursor:pointer;
+}
+
+
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">🔎 Emerging Careers</div>
+
+        <ul class="nav-links">
+            <li><a href="home.html#home">Home</a></li>
+            <li><a href="home.html#PROBLEM1">The Problem</a></li>
+            <li><a href="home.html#careers">Careers</a></li>
+            <li><a href="home.html#solution">Solution</a></li>
+            <li><a href="home.html#about">About</a></li>
+        </ul>
+
+        <a href="home.html#solution" class="btn">Get Started</a>
+    </nav>
+
+    <!-- explanation about careers -->
+    <div class="summary-container">
+  <div class="summary-content">
+      <div class="summary-heading">🤖 AI Engineer</div>
+      <div class="summary-subheading">Crafting Smarter Futures with Intelligent Systems</div>
+      
+      <div class="summary-text">
+        An AI Engineer designs and builds intelligent systems using machine learning 
+        and data science. They work with Python, TensorFlow, and advanced algorithms 
+        to create smart applications, automate decisions, and solve real-world problems. 
+        Their innovations power modern technologies like recommendation systems, 
+        chatbots, and computer vision solutions.
+      </div>
+       <button class="btn-primary" onclick="goAssessment()">Assessment</button>
+
+<script>
+function goAssessment() {
+    // Save current page before login
+    sessionStorage.setItem("redirectAfterLogin", window.location.href);
+
+    // Go to login page
+    window.location.href = "login.html";
+}
+</script>
+
+ 
+  </div>
+</div>
+<!-- YouTube Video -->
+     <section class="ai-section">
+
+  <div class="ai-content">
+
+    <!-- Left Side Text -->
+    <div class="ai-text">
+      <h2>🚀 Explore the World of AI Engineering</h2>
+      <p class="ai-description">
+        Want to understand what an AI Engineer really does? 
+        Watch this short and powerful introduction video to explore 
+        career opportunities, required skills, salary insights, and 
+        real-world applications of Artificial Intelligence.
+      </p>
+
+      <ul class="ai-points">
+        <li>✔ Career Growth & High Demand</li>
+        <li>✔ Skills Required for AI Engineers</li>
+        <li>✔ Salary & Future Scope</li>
+      </ul>
+    </div>
+
+    <!-- Right Side Video -->
+    <div class="ai-video">
+      <iframe 
+        src="https://www.youtube.com/embed/aPObz17OyH8"
+        title="AI Career Video"
+        allowfullscreen>
+      </iframe>
+    </div>
+
+  </div>
+
+</section>
+
+<!-- assement quiz  -->
+<div class="ai-assessment-wrapper">
+
+    <h1 class="ai-title">AI Engineer MCQ Assessment</h1>
+
+    <div class="ai-quiz-container">
+
+        <div class="ai-section-title" id="sectionTitle"></div>
+
+        <div class="ai-question-box">
+            <div class="ai-question-header">
+                <span id="questionNumber"></span>
+                <span id="questionText"></span>
+            </div>
+
+            <div class="ai-options" id="options"></div>
+        </div>
+
+        <div class="ai-buttons">
+            <button onclick="prevQuestion()">Previous</button>
+            <button onclick="nextQuestion()">Next</button>
+        </div>
+
+        <div class="ai-result" id="result"></div>
+
+    </div>
+
+</div>
+
+
+<script src="ai-script.js"></script>
+
+
+    
+    <!-- part of footer -->
+
+    <footer class="footer">
+
+    <h2>🔎 Emerging Careers</h2>
+    <p>Helping students discover and prepare for emerging careers</p>
+
+    <div class="footer-links">
+        <div>
+            <h3>Explore</h3>
+            <ul>
+                <li><a href="#">Careers</a></li>
+                <li><a href="#">Paths</a></li>
+                <li><a href="#">About</a></li>
+            </ul>
+        </div>
+
+        <div>
+            <h3>Resources</h3>
+            <ul>
+                <li><a href="#">Career Guide</a></li>
+                <li><a href="#">Skill Assessment</a></li>
+                <li><a href="#">Blog</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="social-icons">
+        <a href="#"><i class="fab fa-linkedin"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+    </div>
+
+    <div class="footer-bottom">
+        © 2026 Career Awareness. Made for students, by students.
+    </div>
+
+</footer>
+
+
+
+</body>
+</html>

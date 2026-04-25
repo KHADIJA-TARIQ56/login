@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login & Signup</title>
+
+<style>
+/* SAME CSS (no change) */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  height: 100vh;
+  background: linear-gradient(135deg, #0f2027, #2c5364, #00c6ff);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Container */
+.container {
+  width: 420px;
+  padding: 60px 45px; /* more height */
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(15px);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+  border: 1px solid rgba(255,255,255,0.2);
+  color: white;
+}
+
+/* Title */
+h2 {
+  text-align: center;
+  margin-bottom: 35px;
+  font-size: 28px;
+}
+
+/* Input group */
+.input-group {
+  margin-bottom: 25px; /* more space between fields */
+}
+
+/* Label */
+.input-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 14px;
+  color: #eee;
+}
+
+/* Input */
+.input-group input {
+  width: 100%;
+  padding: 14px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  background: rgba(255,255,255,0.2);
+  color: white;
+  font-size: 14px;
+}
+
+/* Placeholder */
+.input-group input::placeholder {
+  color: #ccc;
+}
+
+/* Focus */
+.input-group input:focus {
+  background: rgba(255,255,255,0.3);
+  box-shadow: 0 0 8px rgba(255,255,255,0.5);
+}
+
+/* Button */
+.btn {
+  width: 100%;
+  padding: 14px;
+  border-radius: 10px;
+  border: none;
+  background: linear-gradient(45deg, #00c6ff, #0072ff);
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+  margin-top: 10px;
+}
+
+/* Hover */
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+/* Error */
+.error {
+  color: #ff6b6b;
+  font-size: 13px;
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+
+
+</style>
+
+<!-- FIREBASE FILE -->
+<script type="module" src="firebaseauth.js"></script>
+</head>
+
+<body>
+
+<div class="container">
+
+  <div class="error" id="errorMsg"></div>
+
+  <!-- LOGIN -->
+  <!-- LOGIN -->
+<div id="loginForm">
+  <h2>Sign In</h2>
+
+  <div class="input-group">
+    <label>Email</label>
+    <input type="email" id="loginEmail" placeholder="Enter your email">
+  </div>
+
+  <div class="input-group">
+    <label>Password</label>
+    <input type="password" id="loginPassword" placeholder="Enter your password">
+  </div>
+
+  <button class="btn" id="loginBtn">Sign In</button>
+
+  <p style="margin-top:15px; text-align:center;">
+    Don't have an account? 
+    <span onclick="showSignup()" style="color:#00c6ff; cursor:pointer;">Sign Up</span>
+  </p>
+</div>
+
+
+<!-- SIGNUP -->
+<div id="signupForm" style="display:none;">
+  <h2>Sign Up</h2>
+
+  <div class="input-group">
+    <label>Email</label>
+    <input type="email" id="signupEmail" placeholder="Enter your email">
+  </div>
+
+  <div class="input-group">
+    <label>Password</label>
+    <input type="password" id="signupPassword" placeholder="Enter password">
+  </div>
+
+  <div class="input-group">
+    <label>Confirm Password</label>
+    <input type="password" id="confirmPassword" placeholder="Confirm password">
+  </div>
+
+  <button class="btn" id="signupBtn">Sign Up</button>
+
+  <p style="margin-top:15px; text-align:center;">
+    Already have an account? 
+    <span onclick="showLogin()" style="color:#00c6ff; cursor:pointer;">Sign In</span>
+  </p>
+</div>
+
+
+</div>
+
+
+
+</body>
+</html>
